@@ -8,9 +8,13 @@ ingress:
   host: minimum-review-bot.buffer.com
   path: /
 env:
-  # remove this when we update to helm 2.9.0+
   - name: APP_ID
     value: !!str 15448
+  - name: PRIVATE_KEY
+    valueFrom:
+      secretKeyRef:
+        name: minimum-review-bot-private-key
+        key: minimum-review-bot.private-key.pem
 healthcheck:
   enabled: true
   config:

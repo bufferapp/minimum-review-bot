@@ -6,18 +6,9 @@ const brigadeScripts = require('@bufferapp/buffer-service-brigade-scripts')
 brigadeScripts({
   brigade,
   envVars: [
-    // use this when we update to helm 2.9.0+
-    // {
-    //   name: 'APP_ID',
-    //   projectSecret: 'APP_ID',
-    // },
     {
       name: 'WEBHOOK_SECRET',
       projectSecret: 'WEBHOOK_SECRET',
-    },
-    {
-      name: 'PRIVATE_KEY',
-      projectSecret: 'PRIVATE_KEY',
     },
   ],
   devDeploys: [
