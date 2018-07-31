@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@bufferapp/buffer-service-brigade-scripts": "0.0.2"
+  }
+}

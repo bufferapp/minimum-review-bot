@@ -1,0 +1,21 @@
+name: minimum-review-bot
+namespace: internal
+image:
+  repository: bufferapp/minimum-review-bot
+replicaCount: 1
+ingress:
+  enabled: true
+  host: minimum-review-bot.buffer.com
+  path: /
+healthcheck:
+  enabled: true
+  config:
+    port: 8086
+    livenessChecks:
+    - name: httpget-check
+      type: httpGetCheck
+      url: http://localhost:3000/probot
+    readinessChecks:
+    - name: httpget-check
+      type: httpGetCheck
+      url: http://localhost:3000/probot
