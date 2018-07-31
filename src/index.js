@@ -34,17 +34,10 @@ const skipReview = async ({ context }) => {
         .number,
   })
   return (
-    response.data.filter(comment => {
-      console.log('comment', comment)
-      console.log(comment.body.includes('/skip-review'))
-      console.log("comment.user.type !== 'Bot'", comment.user.type !== 'Bot')
-      console.log(
+    response.data.filter(
+      comment =>
         comment.body.includes('/skip-review') && comment.user.type !== 'Bot',
-      )
-      return (
-        comment.body.includes('/skip-review') && comment.user.type !== 'Bot'
-      )
-    }).length > 0
+    ).length > 0
   )
 }
 
