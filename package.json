@@ -1,0 +1,53 @@
+{
+  "name": "minimum-review-bot",
+  "version": "0.0.1",
+  "description": "A bot that checks for a minimum number of reviews, that can be skipped",
+  "author": "Harrison Harnisch <hharnisc@gmail.com>",
+  "license": "MIT",
+  "repository": "https://github.com/bufferapp/minimum-review-bot.git",
+  "homepage": "https://github.com/bufferapp/minimum-review-bot",
+  "bugs": "https://github.com/bufferapp/minimum-review-bot/issues",
+  "keywords": [
+    "probot",
+    "github",
+    "probot-app"
+  ],
+  "scripts": {
+    "start": "probot run ./src/index.js",
+    "lint": "eslint src/**.js"
+  },
+  "dependencies": {
+    "probot": "^7.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.19.1",
+    "eslint-plugin-prettier": "^2.6.0",
+    "prettier": "^1.12.1"
+  },
+  "engines": {
+    "node": ">= 8.3.0"
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": [
+        2,
+        {
+          "singleQuote": true,
+          "trailingComma": "all",
+          "semi": false,
+          "bracketSpacing": true
+        }
+      ],
+      "no-unused-vars": 2
+    }
+  }
+}
