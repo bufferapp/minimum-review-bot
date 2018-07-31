@@ -7,6 +7,10 @@ ingress:
   enabled: true
   host: minimum-review-bot.buffer.com
   path: /
+env:
+  # remove this when we update to helm 2.9.0+
+  - name: APP_ID
+    value: !!str 15448
 healthcheck:
   enabled: true
   config:
