@@ -99,6 +99,7 @@ module.exports = robot => {
       'pull_request.opened',
       'pull_request.reopened',
       'pull_request_review.submitted',
+      'pull_request_review.edited',
       'pull_request_review.dismissed',
       'pull_request.synchronize',
       'issue_comment.created',
